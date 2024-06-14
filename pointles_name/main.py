@@ -40,4 +40,11 @@ def number_of_digits(text):
     return len(list(filter(lambda char: char.isdigit(), text)))
 
 def task3(path="data/text1.txt"):
-    pass
+    text = open(path, 'r').read()
+    index = text.rfind('\n')
+    text = text[:index]
+    file = open("data/mtext1.txt", 'w')
+    file.write(text)
+    file.close()
+
+task3()
