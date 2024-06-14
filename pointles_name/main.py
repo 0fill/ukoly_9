@@ -53,6 +53,7 @@ def task4(path="data/text1.txt"):
         longest = max([len(line) for line in text])
         return longest
 
-def task5(path="data/text1.txt"):
+def task5(path="data/text1.txt",word = "word"):
+    text = open(path, 'r').read()
+    return text.count(word)
 
-print(task4())
