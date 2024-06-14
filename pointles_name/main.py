@@ -57,3 +57,11 @@ def task5(path="data/text1.txt",word = "word"):
     text = open(path, 'r').read()
     return text.count(word)
 
+def task6(path="data/text1.txt",word = "",replace= "change"):
+    text = open(path, 'r').read()
+    text.replace(word, replace)
+    #open(path, 'w').close()
+    open(path, 'w').write(text)
+
+task6("data/text1.txt","end","F")
+
