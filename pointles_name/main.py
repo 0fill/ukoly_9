@@ -41,10 +41,18 @@ def number_of_digits(text):
 
 def task3(path="data/text1.txt"):
     text = open(path, 'r').read()
-    index = text.rfind('\n')
-    text = text[:index]
+    text = text[:text.rfind('\n')]
     file = open("data/mtext1.txt", 'w')
     file.write(text)
     file.close()
 
-task3()
+def task4(path="data/text1.txt"):
+    with open(path, 'r') as f:
+        text = f.read()
+        text = list(text.split('\n'))
+        longest = max([len(line) for line in text])
+        return longest
+
+def task5(path="data/text1.txt"):
+
+print(task4())
