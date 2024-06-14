@@ -1,0 +1,5 @@
+number of charackters: 236
+number of lines: 11
+number of vowels: 73
+number of constant: 163
+number of digits: 4
