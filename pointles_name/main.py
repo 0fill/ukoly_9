@@ -1,11 +1,8 @@
 vowels = ['a', 'e', 'i', 'o', 'u','y']
-text1 = open('data/text1.txt', 'r+')
-text2 = open('data/text2.txt', 'r+')
-text1.write("Suppose end get boy warrant general natural. Delightful met sufficient projection ask.\nDecisively everything principles if preference do impression of. Preserved oh so difficult\ndalsi text")
-text2.write("Suppose end get boy warrant general natural. Delightful met sufficient projection ask.\nrepulsive on in household. In what do miss time be. Valley as be appear cannot so by.")
-text1.close()
-text2.close()
-
+with open('data/text1.txt', 'r+') as f:
+    f.write("Suppose end get boy warrant general natural. Delightful met sufficient projection ask.\nDecisively everything principles if preference do impression of. Preserved oh so difficult\ndalsi text")
+with open('data/text2.txt', 'r+') as f:
+    f.write("Suppose end get boy warrant general natural. Delightful met sufficient projection ask.\nrepulsive on in household. In what do miss time be. Valley as be appear cannot so by.")
 def task1(path1="data/text1.txt", path2="data/text1.txt"):
     with open(path1, 'r') as text1:
         with open(path2, 'r') as text2:
@@ -62,6 +59,3 @@ def task6(path="data/text1.txt",word = "",replace= "change"):
     text.replace(word, replace)
     #open(path, 'w').close()
     open(path, 'w').write(text)
-
-task6("data/text1.txt","end","F")
-
